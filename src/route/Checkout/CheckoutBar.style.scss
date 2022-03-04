@@ -1,0 +1,96 @@
+
+.StepLine {
+  background-color: grey;
+  height: 10px;
+  width: 560px;
+  bottom: 25px;
+  border-radius: 25px;
+  flex-grow: 3;
+  margin: 0 10px;
+}
+
+.FinishedStepLine {
+  background-color: var(--primary-base-color);
+  height: 10px;
+  width: 560px;
+  bottom: 25px;
+  border-radius: 25px;
+  flex-grow: 3;
+  margin: 0 10px;
+  animation: FinishedStepLineAnim 3s;
+}
+
+.Step {
+  font-size: 15px;
+  flex-flow: row;
+  display: flex;
+}
+
+.StepNumber {
+  top: 10px;
+}
+
+.StepTitle {
+  top: 30px;
+  width: 50px;
+  text-align: center;
+}
+
+.StepCircle {
+  text-align: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  bottom: 38px;
+  border: solid 2px var(--primary-base-color);
+
+}
+
+.Steps {
+  width: 200px;
+  right: 405px;
+  display: flex;
+  flex-flow: row;
+}
+
+.checkmark {
+  display:inline-block;
+  width: 22px;
+  height:22px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkmark_stem {
+  position: absolute;
+  width:3px;
+  height:9px;
+  background-color: var(--primary-base-color);
+  left:11px;
+  top:6px;
+}
+
+.checkmark_kick {
+  position: absolute;
+  width:3px;
+  height:3px;
+  background-color: var(--primary-base-color);
+  left:8px;
+  top:12px;
+}
+
+@keyframes FinishedStepLineAnim {
+  0% {
+    transform: scale(0.5, 0.8);
+  }
+  25% {
+    background-color: grey;
+  }
+  50% {
+    background-color: orangered;
+  }
+  100% {
+    background-color: var(--primary-base-color);
+  }
+}
